@@ -1,0 +1,399 @@
+\documentclass[a4paper, conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+%Template version as of 6/27/2024
+
+\usepackage[colorlinks=true, linkcolor=black, citecolor=blue, urlcolor=blue]{hyperref}
+
+\usepackage[table]{xcolor}
+
+\usepackage{multirow}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+	T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+%\title{Conference Paper Title*\\
+	%{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured for https://ieeexplore.ieee.org  and
+		%should not be used}
+	%\thanks{Identify applicable funding agency here. If none, delete this.}
+	%}
+%
+%\author{\IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
+	%\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+		%\textit{name of organization (of Aff.)}\\
+		%City, Country \\
+		%email address or ORCID}
+	%\and
+	%\IEEEauthorblockN{2\textsuperscript{nd} Given Name Surname}
+	%\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+		%\textit{name of organization (of Aff.)}\\
+		%City, Country \\
+		%email address or ORCID}
+	%\and
+	%\IEEEauthorblockN{3\textsuperscript{rd} Given Name Surname}
+	%\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+		%\textit{name of organization (of Aff.)}\\
+		%City, Country \\
+		%email address or ORCID}
+	%\and
+	%\IEEEauthorblockN{4\textsuperscript{th} Given Name Surname}
+	%\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+		%\textit{name of organization (of Aff.)}\\
+		%City, Country \\
+		%email address or ORCID}
+	%\and
+	%\IEEEauthorblockN{5\textsuperscript{th} Given Name Surname}
+	%\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+		%\textit{name of organization (of Aff.)}\\
+		%City, Country \\
+		%email address or ORCID}
+	%\and
+	%\IEEEauthorblockN{6\textsuperscript{th} Given Name Surname}
+	%\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+		%\textit{name of organization (of Aff.)}\\
+		%City, Country \\
+		%email address or ORCID}
+	%}
+
+\title{Formulating IT Strategies Based on Research and Industry Income Causality in Times Higher Education Rankings}
+
+
+%\author{\IEEEauthorblockN{1\textsuperscript{st} Alfa Yohannis}
+%	\IEEEauthorblockA{\textit{Department of Informatics} \\
+%		\textit{Universitas Pradita}\\
+%		Tangerang, Indonesia \\
+%		alfa.ryano@gmail.com}
+%%	\and
+%%	\IEEEauthorblockN{2\textsuperscript{nd} Alexander Waworuntu}
+%%	\IEEEauthorblockA{\textit{Department of Informatics} \\
+%%		\textit{Universitas Multimedia Nusantara}\\
+%%		Tangerang, Indonesia\\
+%%	alex.wawo@umn.ac.id}
+%%	\and
+%%	\IEEEauthorblockN{3\textsuperscript{rd} Master Edison Siregar}
+%%	\IEEEauthorblockA{\textit{Department of Informatics} \\
+%%		\textit{Universitas Pradita}\\
+%%		Tangerang, Indonesia \\
+%%		master.edison@pradita.ac.id}
+%%	%\and
+%%	%\IEEEauthorblockN{4\textsuperscript{th} Given Name Surname}
+%%	%\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%%		%\textit{name of organization (of Aff.)}\\
+%%		%City, Country \\
+%%		%email address or ORCID}
+%%	%\and
+%%	%\IEEEauthorblockN{5\textsuperscript{th} Given Name Surname}
+%%	%\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%%		%\textit{name of organization (of Aff.)}\\
+%%		%City, Country \\
+%%		%email address or ORCID}
+%%	%\and
+%%	%\IEEEauthorblockN{6\textsuperscript{th} Given Name Surname}
+%%	%\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%%		%\textit{name of organization (of Aff.)}\\
+%%		%City, Country \\
+%%		%email address or ORCID}
+%	}
+
+ \author{\textbf{[Hidden for double-blind review]}}
+%\author{\IEEEauthorblockN{
+%		Alfa Yohannis%\IEEEauthorrefmark{1}
+%		\IEEEauthorrefmark{2},
+%		Master Edison Siregar%\IEEEauthorrefmark{1}%\IEEEauthorrefmark{3}
+%	}
+%	\IEEEauthorblockA{
+%		% \IEEEauthorrefmark{1}
+%		Hidden for Double-blind Review
+%		Department of Informatics\\
+%		Pradita University, Tangerang, Indonesia\\
+%		\IEEEauthorrefmark{2}alfa.ryano@pradita.ac.id}
+%	% 	% \IEEEauthorblockA{
+%		% 	% 	\IEEEauthorrefmark{2}Department of Computer Science\\
+%		% 	% 	University of York, York, United Kingdom}
+%}
+
+\newcommand{\al}[1]{{\textbf{\color{blue} Al: #1}}}
+
+\maketitle
+
+\begin{abstract}
+This study explores the temporal relationship between research performance and industry income in universities using Granger causality analysis. By analysing longitudinal data from the Times Higher Education (THE) Ranking, the research aims to assess whether research activities and industry income influence each other or evolve independently. The findings indicate that, for most universities, there is no significant causal relationship between research performance and industry income, with a smaller proportion exhibiting unidirectional or bidirectional causality. Statistical tests revealed no significant differences in university rankings or overall scores across causality categories. However, descriptive analysis shows that universities with research $\rightarrow$ industry income (RI) causality tend to have slightly better average and median ranks, while universities with bidirectional causality show the highest average and median overall scores. Although these differences are not statistically significant, they suggest potential benefits associated with the alignment of research activities and industry engagement. Based on these observations, the study proposes several IT strategies aimed at facilitating collaboration and data-driven engagement between research and industry, recognising that such strategies may help universities improve operational efficiency, attract industry funding, and strengthen their research and industry partnerships.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Teaching and Research, Granger Causality, University Performance, IT Strategy, Higher Education
+\end{IEEEkeywords}
+
+
+\section{Introduction}
+\label{sec:introduction}
+
+The relationship between research performance and industry income in higher education has become an increasingly relevant topic, particularly as universities seek to enhance their academic standing, financial sustainability, and societal impact. Research-intensive institutions often position academic research as the primary driver of prestige and innovation, which in turn attracts industry funding. Conversely, some universities prioritise strengthening industry partnerships to secure additional income streams and promote the practical application of research. Many institutions attempt to balance these two domains, yet a strategic dilemma persists: should universities prioritise investment in research performance to attract industry funding, or should they focus on building industry partnerships to stimulate and support research activities?
+
+
+This contradiction presents both challenges and opportunities for university leaders and policymakers. Strategic alignment of research activities and industry engagement may help institutions improve research relevance, secure funding, and foster innovation. However, it remains unclear whether research performance drives industry income, whether industry engagement enhances research capacity, or whether the two develop independently. This study aims to investigate the temporal relationship between research performance and industry income in universities, addressing this key question. Using Granger causality analysis~\cite{granger1969investigating}, the research examines whether research and industry income scores exhibit bidirectional, unidirectional, or no causal relationship over time.
+
+The findings of this study seek to inform policy and strategic decisions, particularly in the development of IT strategies that enable effective collaboration between academic research and industry engagement without presuming direct impacts on university rankings. Descriptive analysis highlights that, while no statistically significant differences were observed across causality categories, universities with research $\rightarrow$ industry income causality tend to have slightly better rankings, while those with bidirectional causality show slightly higher overall scores. These patterns suggest that IT strategies can still play a valuable role in facilitating collaboration and data-informed engagement between research and industry.
+
+The paper is organised as follows: Section~\ref{sec:related_work} reviews relevant literature on the relationship between research performance and industry income in higher education. Section~\ref{sec:methodology} describes the methodology, including data collection and statistical techniques used. In Section~\ref{sec:results_and_discussion}, the results of the Granger causality analysis are presented and discussed. Section~\ref{sec:recommended_it_strategy} outlines IT strategies that universities can adopt to facilitate research-industry engagement. Section~\ref{threads_to_validity_and_limitation} highlights potential threats to validity and limitations of the study. Finally, Section~\ref{sec:conclusion_and_future_work} provides conclusions and suggestions for future research.
+
+
+
+\section{Related Work} \label{sec:related_work}  
+The relationship between teaching and research has been extensively explored in higher education, with many studies examining how these activities interact. 
+
+
+
+This research, similar to previous studies, examines the interaction between research performance and industry income but introduces a novel approach by applying Granger causality analysis to explore their temporal relationship, based on data from the Times Higher Education (THE) Ranking. Unlike prior studies that primarily focus on correlation or descriptive comparisons, this paper provides a detailed classification of bidirectional, unidirectional, and no-causality scenarios. Additionally, it proposes actionable IT strategies to facilitate research-industry collaboration, offering new insights for universities seeking to strengthen the alignment between research activities and industry engagement. These strategies are developed not on the basis of significant causal effects, but rather in recognition of descriptive patterns that suggest potential institutional benefits from closer collaboration.
+
+
+\section{Methodology}
+\label{sec:methodology}
+
+This study employs a quantitative research approach, involving systematic data collection, cleaning, and statistical analysis to explore the causal dynamics between research performance and industry income in higher education institutions.
+
+\subsection{Data Collection and Cleaning}
+
+The dataset utilised in this research was compiled through web scraping from the Times Higher Education (THE) Ranking website \cite{the2024}, covering university scores and rankings for the years 2013 to 2023. Additional ranking data for 2011 and 2012 were obtained from a publicly accessible dataset on Kaggle \cite{ONeil_2020}\footnote{The Kaggle dataset served as a complementary source, contributing only for the years 2011--2012 to complete the time series.}. In total, the data spans 13 years and includes information from 711 universities worldwide.
+
+A series of data cleaning procedures were conducted to prepare the dataset. Missing numerical values were addressed using various estimation techniques such as linear interpolation and logarithmic approximation, with the most suitable method selected based on the coefficient of determination ($R^{2}$) to ensure estimation accuracy. Non-essential columns were discarded, retaining only key variables relevant to this study: \textit{rank}, \textit{overall score}, \textit{research score}, and \textit{industry income score}.
+
+To enhance the reliability of the analysis, the dataset was further filtered to include only universities with at least ten years of complete data. This criterion ensured that each institution had a sufficiently long time series to allow for robust causality testing.
+
+\subsection{Data Analysis}
+
+The primary analysis aimed to examine the temporal causal relationship between research performance and industry income scores. To achieve this, Granger causality tests \cite{granger1969investigating} were employed to assess whether past research scores could predict future industry income scores (\textbf{RI Causality}) and whether past industry income scores could predict future research scores (\textbf{IR Causality}).
+
+The Granger causality approach was selected over alternative methods, such as Structural Equation Modelling (SEM) or Vector Autoregression (VAR), because it directly evaluates predictive causality based on historical time series data. This method is particularly appropriate for the objective of this research, as it offers computational efficiency, suitability for bivariate analysis, and widespread acceptance in the field of time-series analysis.
+
+The tests were conducted using two lag lengths ($L=1$ and $L=2$). A lag of one year captures immediate causal effects, while a two-year lag allows for the detection of delayed influences between the two variables. This choice reflects the annual publication cycle of university rankings and balances the need to capture temporal patterns without introducing overfitting risks.
+
+The maximum lag length was limited to $L=2$ to maintain the validity of the analysis. Including longer lags would significantly reduce the number of usable observations per university, thereby lowering statistical power and increasing the likelihood of unreliable results. Given the minimum ten-year time series requirement, a maximum lag of two years was considered appropriate.
+
+Each university was classified into one of four causality categories based on the test results: \textit{RI Causality}, \textit{IR Causality}, \textit{Bidirectional Causality} (where both causal directions are significant), and \textit{No Causality}. For cases of bidirectional causality, an additional breakdown was performed to analyse the strength and significance of each direction separately.
+
+For every causality category, a statistical summary of the Granger F-statistics was compiled, including the mean, standard deviation, median, minimum, and maximum values. Moreover, the average rank and overall score of the universities within each category were analysed to identify potential associations between causality patterns and institutional performance.
+
+To determine whether significant differences existed between causality categories, the Mann-Whitney U test \cite{mann1947test} was applied. This non-parametric test was chosen due to the absence of a normality assumption and was used to compare the distributions of F-statistics, average ranks, and overall scores across different causality groups.
+
+The entire analysis process was implemented using Python. Both the source code and the dataset used in this research are made available to facilitate transparency and reproducibility\footnote{Code and data can be accessed at:
+	[hidden for double-blind review]
+	%	\url{https://github.com/alfa-yohannis/research-industry-causality}
+}.
+
+
+
+
+\section{Results and Discussion}
+\label{sec:results_and_discussion}
+
+\subsection{Causality with Lag = 1 vs Lag = 2}
+\begin{table*}
+	\centering
+	\caption{Summary of Causality Results (p-value $\leq 0.05$, total $n=346$). RI: Research $\rightarrow$ Industry Income, IR: Industry Income $\rightarrow$ Research, Bi: Bidirectional, Bi-RI: RI-first Bidirectional, Bi-IR: IR-first Bidirectional, None: No Causality. Results for lag orders $L=1$ and $L=2$; $L$ denotes lag order and $F$ the F-statistic from the Granger test.}
+	\label{tab:summary_causality}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|r|r|r|r|}
+		\hline
+		\multirow{2}{*}{\textbf{Category}} 
+		& \multicolumn{6}{c|}{$L=1$} 
+		& \multicolumn{6}{c|}{$L=2$} \\ \cline{2-13}
+		& \textbf{Count} & \textbf{\%} & \textbf{Avg F} & \textbf{Std F} & \textbf{Med F} & \textbf{Min--Max F} 
+		& \textbf{Count} & \textbf{\%} & \textbf{Avg F} & \textbf{Std F} & \textbf{Med F} & \textbf{Min--Max F} \\ \hline
+		\textbf{RI}     & 35  & 10.1\% & 5.66  & 8.12  & 4.86  & 0.00--61.05  & 25  & 7.2\%  & 9.19  & 14.24 & 5.41  & 0.06--71.42 \\ \hline
+		\textbf{IR}     & 42  & 12.1\% & 7.79  & 13.03 & 5.21  & 0.00--91.08  & 39  & 11.3\% & 10.06 & 23.47 & 5.32  & 0.17--190.22 \\ \hline
+		\textbf{Bi}     & 8   & 2.3\%  & 15.88 & 16.02 & 9.79  & 5.89--69.65  & 7   & 2.0\%  & 10.12 & 3.36  & 9.41  & 5.94--19.25 \\ \hline
+		\hfill Bi-RI   &     &        & 16.59 & 20.15 & 9.79  & 6.54--69.65  &    &   & 10.18 & 4.02  & 9.14  & 5.94--19.25 \\ \hline
+		\hfill Bi-IR   &     &        & 15.16 & 10.30 & 11.56 & 5.89--37.97  &    &   & 10.07 & 2.54  & 10.14 & 6.06--14.86 \\ \hline
+		\textbf{None}  & 261 & 75.4\% & 1.16  & 1.33  & 0.62  & 0.00--5.79   & 275 & 79.5\% & 1.57  & 1.49  & 1.15  & 0.00--9.44  \\ \hline
+	\end{tabular}
+\end{table*}
+
+
+
+The results of the Granger causality analysis are summarised in Table~\ref{tab:summary_causality}. The analysis indicates that the majority of universities exhibit no significant causal relationship between research and industry income scores, with 75.4\% of universities showing no causality at lag order $L=1$ and 79.5\% at $L=2$. This suggests that, for most universities, research performance and industry income evolve independently over time. Furthermore, the increase in the proportion of universities with no causality at $L=2$ implies that the causal influence between these variables diminishes as the time lag increases, indicating that short-term causal effects are more likely to occur than longer-term ones.
+
+Unidirectional causality was identified in a smaller proportion of cases. At lag order $L=1$, 10.1\% of universities exhibited research $\rightarrow$ industry income (RI) causality, while 12.1\% showed industry income $\rightarrow$ research (IR) causality. At lag order $L=2$, these proportions slightly decreased to 7.2\% for RI causality and 11.3\% for IR causality. This decline suggests that causal effects are more evident in the short term but tend to weaken over time. Notably, the proportion of IR causality consistently exceeded that of RI causality at both lag orders, indicating a stronger tendency for industry income to influence research performance rather than the reverse.
+
+Bidirectional causality, in which both variables Granger-cause each other, was found in only 2.3\% of universities at $L=1$ and 2.0\% at $L=2$. This low percentage reflects the rarity of a reciprocal causal relationship between research and industry income. Further analysis divided the bidirectional category into Bi-RI (research-first bidirectional) and Bi-IR (industry income-first bidirectional). The decomposition showed that, at lag order $L=1$, Bi-RI cases had slightly higher average F-statistics than Bi-IR, whereas at $L=2$, the F-statistics were relatively similar across the two directions.
+
+The strength of causality, as reflected by the average F-statistics, was generally higher in bidirectional cases. At lag order $L=1$, the average F-statistic for bidirectional causality was 15.88, compared to 5.66 and 7.79 for RI and IR causality, respectively. This trend persisted at $L=2$, where bidirectional causality exhibited an average F-statistic of 10.12, higher than the averages for unidirectional causality. These results suggest that when causality is present in both directions, the interaction between research and industry income is statistically stronger, underscoring the potential benefits of fostering integrated strategies.
+
+Overall, the findings suggest that, for most universities, research performance and industry income develop independently. However, when a causal relationship exists—particularly in bidirectional cases—the interaction tends to be stronger and more statistically significant. This may reflect institutional strategies that effectively link research excellence with industry engagement, contributing to mutual reinforcement between academic research and income from industry partnerships. The relatively low proportion of bidirectional causality cases implies that universities may need targeted policies and strategic alignment to strengthen the synergy between research output and industry collaboration.
+
+The results in Table~\ref{tab:summary_causality} provide detailed insights into the distribution of F-statistics, including minimum, maximum, median, and standard deviation values for each causality category. The comparison of lag orders $L=1$ and $L=2$ highlights a potential weakening of causal effects over time, supporting the interpretation that short-term causality is more prominent. These empirical findings can inform policymakers and university leaders in evaluating and enhancing strategies to better align research activities with industry engagement outcomes.
+
+
+\subsection{Overall Causality}
+\begin{table}
+	\centering
+	\caption{Summary of Combined Causality Results: F-Statistic (p-value $\leq 0.05$, total $n=346$). RI: Research $\rightarrow$ Industry Income, IR: Industry Income $\rightarrow$ Research, Bi: Bidirectional, Bi-RI: Bidirectional RI-first, Bi-IR: Bidirectional IR-first, None: No Causality.}
+	\label{tab:granger_overall}
+	\begin{scriptsize}
+		\begin{tabular}{|l|r|r|r|r|r|r|r|}
+			\hline
+			\textbf{Category} & \textbf{Count} & \textbf{\%} 
+			& \textbf{Avg F} & \textbf{Std F} & \textbf{Med F} & \textbf{Min F} & \textbf{Max F} \\ \hline
+			RI               & 48  & 13.9\% & 4.97  & 9.26  & 2.40  & 0.00  & 71.42 \\ \hline
+			IR               & 65  & 18.8\% & 5.91  & 15.30 & 2.01  & 0.00  & 190.22 \\ \hline
+			Bi               & 18  & 5.2\%  & 7.87  & 9.69  & 6.56  & 0.00  & 69.65 \\ \hline
+			\hfill Bi-RI     &     &        & 7.89  & 11.40 & 6.56  & 0.01  & 69.65 \\ \hline
+			\hfill Bi-IR     &     &        & 7.84  & 7.61  & 6.82  & 0.00  & 37.97 \\ \hline
+			None            & 215 & 62.1\% & 1.28  & 1.36  & 0.77  & 0.00  & 9.04  \\ \hline
+		\end{tabular}
+	\end{scriptsize}
+\end{table}
+
+
+The results of the Granger causality analysis summarised in Table~\ref{tab:granger_overall} provide key insights into the relationship between research performance and industry income across universities.
+
+A substantial proportion of universities exhibited no significant causality between research and industry income, with 62.1\% of institutions showing no causal relationship. This indicates that, for most universities, research performance and industry income evolve independently over time. The absence of causality suggests that improvements or changes in one of these variables do not necessarily lead to predictable changes in the other.
+
+In a smaller subset of universities, unidirectional causality was observed. Specifically, 13.9\% of universities demonstrated research $\rightarrow$ industry income (RI) causality, while 18.8\% exhibited industry income $\rightarrow$ research (IR) causality. The higher proportion of IR causality implies that, in many cases, increased industry engagement and income precede improvements in research performance. This pattern highlights the potential role of industry collaboration and financial support in driving academic research activities.
+
+Bidirectional causality, where research and industry income mutually influence each other, was identified in only 5.2\% of universities. Institutions in this category exhibited stronger causal relationships and higher F-statistics compared to unidirectional cases. This indicates that when a reciprocal causal link exists, the interaction between research performance and industry income is more robust and statistically significant. Such cases may reflect universities that have successfully integrated research initiatives with industry partnerships, creating a positive feedback loop that reinforces both activities.
+
+Further analysis revealed that the average F-statistics in the bidirectional category were higher than those in the unidirectional categories. This finding underscores the strength of mutual causality and supports the notion that strategic alignment between research and industry engagement can generate sustained benefits for universities.
+
+Overall, these results suggest that research and industry income often develop independently. However, when causal relationships do exist—particularly in bidirectional cases—the interaction is stronger and potentially beneficial. Universities showing bidirectional causality may have adopted policies, structures, or collaborative practices that effectively link research efforts with industry partnerships.
+
+The relatively low proportion of bidirectional causality cases indicates that many universities have yet to establish strong reciprocal links between research and industry income. To address this, institutions may consider implementing specific strategies such as fostering collaborative research projects with industry, incentivising knowledge transfer activities, and leveraging digital platforms to enhance engagement between academia and industry. Strengthening these connections may help universities achieve better academic and financial outcomes through integrated research and industry strategies.
+
+
+
+\subsection{Rank and Overall Score Characteristics}
+
+\begin{table}
+	\centering
+	\caption{Summary of Combined Causality Results: Average Rank (p-value $\leq 0.05$, total $n=346$). RI: Research $\rightarrow$ Industry Income, IR: Industry Income $\rightarrow$ Research, Bi: Bidirectional, None: No Causality.}
+	\label{tab:category_average}
+	\begin{scriptsize}
+		\begin{tabular}{|l|r|r|r|r|r|}
+			\hline
+			\textbf{Category} & \textbf{Avg} & \textbf{Std} & \textbf{Med} & \textbf{Min} & \textbf{Max} \\ \hline
+			\textbf{RI}           & 222.31  & 126.93  & 188.66  & 33.23   & 494.64  \\ \hline
+			\textbf{IR}           & 245.42  & 189.01  & 206.15  & 3.85    & 820.90  \\ \hline
+			\textbf{Bi}           & 226.53  & 163.45  & 197.95  & 2.23    & 625.92  \\ \hline
+			\textbf{None}         & 245.06  & 164.88  & 214.75  & 2.38    & 727.91  \\ \hline
+		\end{tabular}
+	\end{scriptsize}
+\end{table}
+
+\begin{table}
+	\centering
+	\caption{Summary of Combined Causality Results: Average Score (p-value $\leq 0.05$, total $n=346$). RI: Research $\rightarrow$ Industry Income, IR: Industry Income $\rightarrow$ Research, Bi: Bidirectional, None: No Causality.}
+	\label{tab:category_score}
+	\begin{scriptsize}
+		\begin{tabular}{|l|r|r|r|r|r|}
+			\hline
+			\textbf{Category} & \textbf{Avg} & \textbf{Std} & \textbf{Med} & \textbf{Min} & \textbf{Max} \\ \hline
+			\textbf{RI}           & 51.92  & 9.98    & 50.87  & 38.95  & 75.78  \\ \hline
+			\textbf{IR}           & 53.86  & 14.27   & 50.09  & 37.20  & 93.73  \\ \hline
+			\textbf{Bi}           & 53.97  & 13.63   & 50.88  & 38.31  & 94.48  \\ \hline
+			\textbf{None}         & 52.54  & 13.00   & 49.37  & 37.20  & 94.63  \\ \hline
+		\end{tabular}
+	\end{scriptsize}
+\end{table}
+
+
+\begin{table}
+	\centering
+	\caption{Pairwise Mann-Whitney U test $p$-values for average rank and score. Significance: $^{***}$ $p \leq 0.01$, $^{**}$ $p \leq 0.05$, $^{*}$ $p \leq 0.10$. RI: Research $\rightarrow$ Industry Income, IR: Industry Income $\rightarrow$ Research, Bi: Bidirectional, None: No Causality.}
+	\label{tab:significance}
+	\begin{scriptsize}
+		\begin{tabular}{|l|cccc|cccc|}
+			\hline
+			\multirow{2}{*}{\textbf{Category}} 
+			& \multicolumn{4}{c|}{\textbf{Rank ($p$-value)}} 
+			& \multicolumn{4}{c|}{\textbf{Score ($p$-value)}} \\ \cline{2-9}
+			& \textbf{RI} & \textbf{IR} & \textbf{Bi} & \textbf{None} 
+			& \textbf{RI} & \textbf{IR} & \textbf{Bi} & \textbf{None} \\ \hline
+			\textbf{RI}   
+			&  --    & 0.9190 & 0.8628 & 0.6174 
+			&  --    & 1.0000 & 0.8515 & 0.6693 \\ \hline
+			\textbf{IR}   
+			&        &  --    & 0.8467 & 0.6934 
+			&        &  --    & 0.8640 & 0.6941 \\ \hline
+			\textbf{Bi}   
+			&        &       &  --    & 0.6270 
+			&        &       &  --    & 0.6662 \\ \hline
+			\textbf{None} 
+			&        &       &       
+			&        &       &       &  --    \\ \hline
+		\end{tabular}
+	\end{scriptsize}
+\end{table}
+
+
+
+The results in Table~\ref{tab:category_average}, Table~\ref{tab:category_score}, and Table~\ref{tab:significance} provide important insights into the relationship between research performance and industry income across universities, specifically focusing on their ranks and overall scores in different causality categories.
+
+A substantial portion of universities (62.1\%) showed no significant causal relationship between research and industry income. For these universities, the average rank was relatively high at 245.06, with an average overall score of 52.54. This indicates that, in the absence of a causal relationship, universities generally occupy moderate positions in the rankings and exhibit average performance scores.
+
+Unidirectional causality was observed in a smaller subset of universities. Specifically, 13.9\% of universities exhibited research $\rightarrow$ industry income (RI) causality, while 18.8\% demonstrated industry income $\rightarrow$ research (IR) causality. For RI causality, the average rank was 222.31 with an average overall score of 51.92. For IR causality, the average rank was 245.42 and the average score was 53.86. These results suggest that IR causality is slightly associated with higher performance scores despite a higher average rank compared to RI causality, indicating that industry income may have a marginally stronger link to research performance.
+
+Bidirectional causality, identified in only 5.2\% of universities, showed relatively stronger performance in both rank and score compared to the unidirectional categories. Universities with bidirectional causality had an average rank of 226.53 and the highest average overall score of 53.97. These institutions tend to integrate research and industry partnerships more effectively, potentially resulting in improved academic performance and stronger industry engagement.
+
+The results of the Mann-Whitney U test presented in Table~\ref{tab:significance} show no statistically significant differences in average rank or score across the causality categories. All $p$-values exceeded the 0.10 significance threshold, indicating that, based on this dataset, the observed differences in ranks and scores between causality categories may not be statistically meaningful.
+
+Overall, while descriptive statistics suggest that universities with causal relationships—particularly bidirectional—tend to perform slightly better in terms of rank and score, these differences were not statistically significant. This implies that the presence or absence of causality between research and industry income does not necessarily translate into systematic differences in university performance. Policymakers and university leaders may need to consider additional factors beyond causality when formulating strategies to improve research output and industry engagement.
+
+
+\section{Recommended IT Strategy}
+\label{sec:recommended_it_strategy}
+
+The findings from the Granger causality analysis and subsequent evaluation of universities' performance indicate that there is no statistically significant relationship between research performance and industry income in terms of rankings and overall scores. This suggests that, while some universities demonstrate causal interactions, these relationships do not systematically translate into better academic performance. Nevertheless, descriptive analysis revealed that universities with research $\rightarrow$ industry income (RI) causality tend to have slightly better average and median ranks, while universities with bidirectional causality show the highest average and median overall scores. Although these differences are not statistically significant, they highlight potential patterns worth supporting. Therefore, IT strategies should focus on creating enabling environments, facilitating voluntary collaboration, and providing digital infrastructure that may encourage these positive dynamics without assuming direct causal impact on rankings.
+
+\begin{enumerate}
+	\item \textbf{Establish Optional Research-Industry Collaboration Platforms}: Universities can develop IT platforms that facilitate but do not enforce collaboration between researchers and industry partners. These platforms should enable voluntary engagement based on mutual interest and project relevance, supporting institutions that may benefit from improved rankings through RI causality or increased scores through bidirectional engagement.
+	
+	\item \textbf{Data-Driven Monitoring and Reporting Tools}: Universities should invest in analytics systems that continuously monitor research activities and industry income partnerships. This will allow institutions to identify emerging patterns or potential synergies, including the descriptive tendencies observed in this study, and guide data-informed decisions without assuming causality.
+	
+	\item \textbf{Flexible IT Infrastructure to Support Collaboration Opportunities}: Rather than mandating integration, universities should provide scalable and flexible IT infrastructures that enable collaboration when beneficial. Cloud-based systems, research databases, and knowledge-sharing platforms can support ad hoc projects, joint initiatives, and research commercialisation efforts without requiring structural dependency.
+	
+	\item \textbf{Faculty and Staff Capacity Development for Industry Engagement}: Universities can offer optional training and professional development to faculty interested in industry collaboration. Enhancing digital competencies and understanding industry needs may encourage voluntary partnerships, particularly in institutions showing RI or bidirectional causality patterns.
+	
+	\item \textbf{Transparent Communication of Research and Industry Portfolios}: Developing digital platforms that transparently present university research outputs and industry collaboration opportunities can enhance visibility and encourage engagement. These platforms can help institutions leverage potential advantages identified in RI and bidirectional causality cases.
+	
+	\item \textbf{Continuous Evaluation of Integration Efforts}: Given the absence of statistically significant performance differences across causality categories, universities should periodically evaluate the outcomes of research-industry engagement initiatives. IT-supported evaluation frameworks can ensure that integration efforts remain cost-effective, relevant, and aligned with institutional goals.
+	
+	\item \textbf{Maintain Strategic Autonomy in Teaching, Research, and Industry Domains}: Finally, universities should retain flexibility to allow teaching, research, and industry engagement to develop independently when appropriate. IT strategies should support collaboration and synergy without mandating integration, recognising that structural independence may be more effective in certain contexts.
+\end{enumerate}
+
+The findings highlight that integration between research and industry income does not automatically lead to improved rankings or scores. However, the descriptive tendencies observed—where RI causality is associated with slightly better rankings and bidirectional causality with higher overall scores—suggest that certain universities may benefit from closer alignment between research and industry engagement. Therefore, IT strategies should focus on providing the conditions, infrastructure, and digital tools that facilitate collaboration and data-driven decision-making, while acknowledging that integration may offer operational and strategic benefits without guaranteeing performance improvements.
+
+
+
+
+
+\section{Threats to Validity and Limitation}
+\label{threads_to_validity_and_limitation}
+
+This study has several limitations that may affect the validity and generalisability of its findings. The data were sourced exclusively from the Times Higher Education (THE) Ranking, which is based on selected indicators and may not fully capture factors influencing university-industry engagement. The analysis was limited to universities with at least ten years of data, potentially excluding newer or smaller institutions with different dynamics. Moreover, the Granger causality test identifies temporal precedence but does not establish true causal relationships. The analysis focused on short-term lags ($L=1$ and $L=2$), which may not reflect long-term interactions between research performance and industry income. Additionally, external factors such as national policies, funding models, faculty quality, or economic conditions were not controlled for and may have influenced the observed patterns.
+
+A further limitation concerns the statistical results. Although descriptive analysis revealed differences in average rank and score across causality categories, the Mann-Whitney U test showed no statistically significant differences. This suggests that the presence or absence of causality does not systematically correlate with university performance indicators in this dataset. The relatively small sample size in the bidirectional causality category may also limit representativeness. Moreover, data cleaning procedures, including interpolation to address missing values, could introduce estimation biases. Finally, the limited temporal scope and reliance on aggregated ranking data constrain the depth of causal inference. Future research may benefit from incorporating additional variables, extended time periods, and qualitative insights to better understand the relationship between research performance and industry income.
+
+
+
+\section{Conclusion and Future Work}
+\label{sec:conclusion_and_future_work}
+
+This study investigates the temporal relationship between research performance and industry income in higher education institutions using Granger causality analysis. The results reveal that, for the majority of universities, research and industry income scores evolve independently over time, with no statistically significant causal relationship identified. Although a small subset of universities exhibited unidirectional or bidirectional causality, further analysis showed no significant differences in average rank or overall score across causality categories. These findings suggest that the presence of causality between research and industry income does not necessarily translate into systematic differences in institutional performance.
+
+Future research could expand upon these findings by incorporating additional variables that may influence research and industry engagement, such as national innovation policies, institutional strategies, or the nature of industry partnerships. Extending the observation period and including universities with shorter data histories may provide further insights into emerging trends. Moreover, applying alternative causality detection methods and qualitative case studies could help identify specific factors that facilitate effective research-industry collaboration. Such approaches may offer practical recommendations for universities seeking to enhance their industry income without assuming that closer integration with research performance will automatically improve academic outcomes.
+
+
+
+\section*{Acknowledgement}
+
+This research used Artificial Intelligence (AI) to assist in script development for scraping, data analysis, and summarisation. The structure and flow of this paper were drafted by the authors, while AI supported grammar checking, wording, and sentencing. The final version was refined to ensure clarity, coherence, and alignment with research objectives.
+
+\bibliography{references}
+\bibliographystyle{IEEEtran}
+
+\end{document}
